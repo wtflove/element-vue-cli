@@ -1,31 +1,46 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="app">
+    <el-container style="height: 100%; border: 1px solid #eee">
+      <el-aside style="width: 20%">Aside</el-aside>
+      <el-container>
+        <el-header>Header</el-header>
+        <el-main>Main</el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
+<script>
+// @ is an alias to /src
+// import HelloWorld from '@/components/HelloWorld.vue'
 
+export default {
+  name: 'app',
+  components: {
+    // HelloWorld
+  }
+}
+
+</script>
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.el-header {
+  background-color: #B3C0D1;
+  color: #333;
   text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+  /*line-height: 60px;*/
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.el-aside {
+  background-color: #D3DCE6;
+  color: #333;
+  text-align: center;
+  /*line-height: 200px;*/
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  text-align: center;
+  /*line-height: 160px;*/
 }
+
 </style>
